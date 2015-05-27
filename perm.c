@@ -46,10 +46,14 @@ int perm(int *place, int m, int *symbol, int n )
 int printp(int *place)
 {
 	int i;
-	for (i = 1; i <= place[0]; i++)
-		printf("%d ", place[i]);
-	putchar('\n');
-	return 0;
+	for (i = 1; ;i++) {
+		printf("%d", place[i]);
+		if (i >= place[0]) {
+			printf("\n");
+			return 0;
+		} else
+			putchar(' ');
+	}
 }
 /*
 	if the buffer is full
